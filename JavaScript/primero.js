@@ -4,7 +4,7 @@ let numero2=9;
 let edad=numero1+numero2;
 let estudios=true;
 
-console.log("Hola mi nombre es"+nombre+" tengo "+edad+" años y estudio "+estudios );
+console.log("Hola mi nombre es"+nombre+" tengo "+edad+" años y estudio "+(estudios?"Si":"No") );
 
 let nota=1;
 
