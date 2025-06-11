@@ -41,3 +41,16 @@ let pares=numeros2.filter(numero=>numero%2===0);
 let lenguajes=["HTML", "CSS", "JS"];
 
 let aprendiendo=lenguajes.map(lenguaje=>"estoy aprendiendo "+lenguaje);
+
+const productos=[{nombre:"vinilo",precio:25.5},
+                  {nombre:"TocaDiscos",precio:109.95},
+                  {nombre:"Movil",precio:300},
+                  {nombre:"silla Gaming",precio:700},
+                  {nombre:"patatas",precio:12}];
+
+let prodBaratos=productos.filter(producto => producto.precio<30)
+.map(producto=>`El producto ${productos.nombre} cuesta ${productos.precio}`);
+
+let mensajesProd=productos.map(producto=>`El producto ${producto.nombre} cuesta ${producto.precio}`);
+
+let total=productos.reduce((acum,producto)=>acum+producto.precio,0);
