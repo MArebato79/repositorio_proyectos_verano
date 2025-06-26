@@ -1,5 +1,6 @@
 const lista =document.getElementById("lista-productos");
 const boton=document.getElementById("boton_baratos");
+const botonOrdenar=document.getElementById("ordenarPrecios");
 const productos=[{ nombre: "Vinilo", precio: 25.5 },
   { nombre: "Tocadiscos", precio: 109.95 },
   { nombre: "Móvil", precio: 300 },
@@ -21,3 +22,15 @@ boton.addEventListener("click",()=>{
         lista.appendChild(li);
     })
 });
+
+botonOrdenar.addEventListener("click",()=>{
+    const ordenados=[...productos].sort((a,b)=> a.precio - b.precio);
+
+    lista.innerHTML="";
+
+    ordenados.forEach(ordenado=>{
+        const li=document.createElement("li");
+        li.textContent=`${ordenado.nombre} - ${ordenado.precio}`;
+        lista.appendChild(li);
+    })
+})
